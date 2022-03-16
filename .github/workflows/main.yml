@@ -33,13 +33,12 @@ jobs:
           chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
           ./scripts/RunAppiumServer.sh
       - name: Install Python 3
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9.10
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pipenv
           pip install -r requirements.txt
       - name: Gradle cache
         uses: actions/cache@v2
@@ -64,4 +63,4 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
-          script: pipenv run python3 -u AppiumTest.py
+          script: python -u AppiumTest.py
