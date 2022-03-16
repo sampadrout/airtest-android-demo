@@ -1,0 +1,4 @@
+airtest==1.2.4
+tqdm==4.62.3
+Appium-Python-Client==2.1.4
+pocoui==1.0.85
