@@ -64,4 +64,4 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
-          script: pipenv run python -u AppiumTest.py
+          script: pipenv run python3 -u AppiumTest.py
